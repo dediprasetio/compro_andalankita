@@ -5,6 +5,17 @@
 !system/cache/*
 !*/cache/index.html
 !*/cache/.htaccess
+.DS_Store
+
+application/cache/*
+!application/cache/index.html
+
+application/logs/*
+!application/logs/index.html
+
+!application/*/.htaccess
+
+composer.lock
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
@@ -16,3 +27,34 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/
+
+
+# Ignore all .zip files
+*.zip
+
+# Ignore the public/front-end directory
+public/front-end/
+
+# Ignore the application/controllers_old directory
+application/controllers_old/
+
+# Ignore the view/page_old directory
+view/page_old/
+
+# Ignore the view/template_old directory
+view/template_old/
