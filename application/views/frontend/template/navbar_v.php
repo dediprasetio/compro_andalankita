@@ -26,9 +26,10 @@
                             <a href="<?= base_url() ?>vission-mission" class="dropdown-item">Visi & Misi</a>
                             <a href="<?= base_url() ?>key-factors" class="dropdown-item">Key Factors</a>
                             <a href="<?= base_url() ?>problem-solution" class="dropdown-item">Problems & Solutions</a>
+                            <a href="<?= base_url() ?>contact-us" class="dropdown-item">Contact Us</a>
                         </div>
                     </div>
-                    <a href="<?= base_url() ?>product" class="nav-item nav-link">Produk</a>
+                    <!-- <a href="<?= base_url() ?>product" class="nav-item nav-link">Produk (coming soon)</a> -->
                     <a href="<?= base_url() ?>service" class="nav-item nav-link">Services</a>
                     <a href="<?= base_url() ?>porto" class="nav-item nav-link">Portofolio</a>
                     <div class="nav-item dropdown">
@@ -40,7 +41,6 @@
                     </div>
                     <a href="<?= base_url() ?>projectstatus" class="nav-item nav-link">Project Status</a>
                     <a href="<?= base_url() ?>team" class="nav-item nav-link">Be Our Team</a>
-                    <a href="contact" class="nav-item nav-link">Contact Us</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 <a href="" class="btn-orange py-2 px-4 ms-3">Register or Login</a>
