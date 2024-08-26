@@ -31,7 +31,7 @@
                     </div>
                     <!-- <a href="<?= base_url() ?>/product" class="nav-item nav-link">Produk (Coming Soon)</a> -->
                     <a href="<?= base_url() ?>/service" class="nav-item nav-link">Services</a>
-                    <a href="<?= base_url() ?>/porto" class="nav-item nav-link">Portofolio</a>
+                    <!-- <a href="<?= base_url() ?>/porto" class="nav-item nav-link">Portofolio</a> -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News</a>
                         <div class="dropdown-menu m-0">

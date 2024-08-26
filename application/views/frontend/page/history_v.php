@@ -6,8 +6,8 @@
           <div class="row">
             <div class="col-md-6 align-self-center">
               <div class="right-content">
-                <span>Koperasi Jasa Angkutan</span>
-                <h2>Koperasi Trayek <em>Karanganyarjaya</em></h2>
+                <span>PT. Prima Senja Perkasa</span>
+                <h2>Andalalinkita.com</h2>
                 <br>
                 <?= $data['page_data']->page_content ?>
               </div>
