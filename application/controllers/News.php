@@ -43,11 +43,25 @@ class News extends Main_controller
 
     $this->pagination->initialize($config);
 
-    $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+    // Calculate the page number
+    $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1; // Default to page 1 if not set
     $paging['page'] = $page;
     $paging['perpage'] = $config['per_page'];
 
-    $news = $this->m_main->view_where_ordering_limit('news', array('status_id' => 2), 'news_id', 'DESC', ($paging['page'] * $paging['perpage']) - $paging['perpage'], $paging['perpage'])->result_array();
+    // Calculate offset correctly
+    $offset = ($paging['page'] - 1) * $paging['perpage'];
+
+    // Debug: Check values before query
+    // echo 'Page: ' . $paging['page'] . ' Offset: ' . $offset; exit;
+
+    $news = $this->m_main->view_where_ordering_limit(
+        'news',
+        array('status_id' => 2),
+        'news_id',
+        'DESC',
+        $offset,
+        $paging['perpage']
+    )->result_array();
 
     $data = array(
         'content'       => 'frontend/page/news_v',
@@ -66,6 +80,7 @@ class News extends Main_controller
 
     $this->template->render_view('frontend/template_v', $data);
 }
+
 
 	public function detail()
 	{
