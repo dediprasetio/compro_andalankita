@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Koperasi || Karanganyar Jayar</title>
+	<title>CMS | Andalalinkita.com</title>
 	<link rel="icon" href="<?= base_url() ?>public/global-images/cms.png" type="image/ico" />
 
 	<!-- Global stylesheets -->

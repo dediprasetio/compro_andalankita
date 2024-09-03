@@ -91,7 +91,7 @@ body{
 
 
 .bg-login{
-    background-image: url(../../../images/background/bg-login.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../../../images/background/cms.webp);
     min-height: 100%;
     background-size: 100%;
     padding: 20px;
@@ -106,7 +106,7 @@ body{
     
 }
 .detail-part{
-    background-image: url(../../../images/background/login-secondary.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../../../images/background/discuss.jfif);
     padding: 30px;
     background-size: 100%;
 }

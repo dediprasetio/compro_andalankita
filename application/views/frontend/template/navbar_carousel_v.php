@@ -30,7 +30,21 @@
                         </div>
                     </div>
                     <!-- <a href="<?= base_url() ?>/product" class="nav-item nav-link">Produk (Coming Soon)</a> -->
-                    <a href="<?= base_url() ?>/service" class="nav-item nav-link">Services</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu m-0">
+                            <!-- <a href="<?= base_url() ?>history" class="dropdown-item">Sejarah</a> -->
+                            <?php if (!empty($global_page_services)): ?>
+                                <ul>
+                                    <?php foreach ($global_page_services as $page): ?>
+                                        <li><?php echo '<a href="'.$page->page_title.'history" class="dropdown-item">'.$page->page_title.'</a>' ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php else: ?>
+                                <p>No services pages found.</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                     <!-- <a href="<?= base_url() ?>/porto" class="nav-item nav-link">Portofolio</a> -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News</a>

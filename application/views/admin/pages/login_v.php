@@ -4,15 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Property agent | Smarteyeapps.com</title>
+	<title>CMS | Andalalinkita.com</title>
+	<link rel="icon" href="<?= base_url() ?>public/global-images/cms.png" type="image/ico" />
     <link href="<?= base_url() ?>public/cms/plugins/font-awesome/font-awesome.css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-    <link rel="icon" href="<?= base_url() ?>public/cms/images/logo/logo.png" type="image/ico" />
     <link href="<?= base_url() ?>public/cms/build/css/global/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>public/cms/build/css/global/login.css" rel="stylesheet" type="text/css">
     <style lang="">
         form .error {
             margin-top: -10px;
             color: #ff0000;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #696eff, #f8acff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
         }
     </style>
 </head>
@@ -26,8 +33,9 @@
                         <div class="col-md-5 detail-part text-center">
                             <div class="logo-cover" >
                                 <br><br>
-                                <img src="<?= base_url() ?>public/cms/images/logo/logo-login.png" alt="" width="105">
-                                <h1 class="font-weight-bold mt-2 text-light" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">KOPERASI <br> KARANGANYAR JAYA</h1>
+                                <img src="<?= base_url() ?>public/global-images/cms.png" alt="" width="105">
+                                <h3 class="text-uppercase font-weight-bold text-white gradient-text">Content Management</h3>
+                                <h4 class="font-weight-semibold text-white">ANDALALINKITA.COM</h4>
                                 <!-- <h1 class="font-weight-bold mt-2" style="color: #353535; font-size: 1.7rem; background-color: RGBA(255, 255, 255, 0.4); padding: 3px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">KOPERASI</h1> -->
                             </div>
                             <!-- <p class="text-center" style="font-size: 1,4rem; margin-top: 0px; letter-spacing: 3px; font-weight: 600; text-shadow: 2px 1px 1px #404355; color: white;">Karanganyar Jaya</p> -->

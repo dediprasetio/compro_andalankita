@@ -30,17 +30,23 @@
                         </div>
                     </div>
                     <!-- <a href="<?= base_url() ?>product" class="nav-item nav-link">Produk (coming soon)</a> -->
-                    <a href="<?= base_url() ?>service" class="nav-item nav-link">Services</a>
-                    <a href="<?= base_url() ?>porto" class="nav-item nav-link">Portofolio</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">News</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                         <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                            <!-- <a href="<?= base_url() ?>history" class="dropdown-item">Sejarah</a> -->
+                            <?php if (!empty($global_page_services)): ?>
+                                <?php foreach ($global_page_services as $page): ?>
+                                    <?php echo '<a href="'.base_url().'pages/index/'.$page->page_code.'" class="dropdown-item">'.$page->page_title.'</a>' ?>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p>No services pages found.</p>
+                            <?php endif; ?>
                         </div>
                     </div>
+                    <a href="<?= base_url() ?>pages/index/porto" class="nav-item nav-link">Portofolio</a>
+                    <a href="<?= base_url() ?>news" class="nav-item nav-link">News</a>
                     <a href="<?= base_url() ?>projectstatus" class="nav-item nav-link">Project Status</a>
-                    <a href="<?= base_url() ?>team" class="nav-item nav-link">Be Our Team</a>
+                    <a href="<?= base_url() ?>pages/index/ourteam" class="nav-item nav-link">Be Our Team</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 <a href="" class="btn-orange py-2 px-4 ms-3">Register or Login</a>
