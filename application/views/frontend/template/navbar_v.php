@@ -18,12 +18,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="<?= base_url() ?>" class="nav-item nav-link active">Home</a>
+                    <a href="<?= base_url() ?>" class="nav-item nav-link">Home</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
                         <div class="dropdown-menu m-0">
                             <a href="<?= base_url() ?>history" class="dropdown-item">Sejarah</a>
-                            <a href="<?= base_url() ?>vission-mission" class="dropdown-item">Visi & Misi</a>
+                            <a href="<?= base_url() ?>vision-mission" class="dropdown-item">Visi & Misi</a>
                             <a href="<?= base_url() ?>key-factors" class="dropdown-item">Key Factors</a>
                             <a href="<?= base_url() ?>problem-solution" class="dropdown-item">Problems & Solutions</a>
                             <a href="<?= base_url() ?>contact-us" class="dropdown-item">Contact Us</a>
@@ -45,7 +45,7 @@
                     </div>
                     <a href="<?= base_url() ?>pages/index/porto" class="nav-item nav-link">Portofolio</a>
                     <a href="<?= base_url() ?>news" class="nav-item nav-link">News</a>
-                    <a href="<?= base_url() ?>projectstatus" class="nav-item nav-link">Project Status</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1hsBos8u8Qg33RJ4bqv3_miVO60KAHEk9P6PoQV1wZus/edit?usp=sharing" target="_blank" class="nav-item nav-link">Project Status</a>
                     <a href="<?= base_url() ?>pages/index/ourteam" class="nav-item nav-link">Be Our Team</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>

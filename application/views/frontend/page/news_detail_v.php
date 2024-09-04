@@ -34,7 +34,7 @@
                         </div>
                         <div class="link-animated d-flex flex-column justify-content-start">
                             <?php foreach ($data['categories'] as $category): ?>
-                                <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="<?= base_url('news/category/'.$category['category_name']) ?>">
+                                <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="<?= base_url('news/category/'.$category['category_id']) ?>">
                                     <i class="bi bi-arrow-right me-2"></i><?php echo htmlspecialchars($category['category_description']); ?>
                                 </a>
                             <?php endforeach; ?>

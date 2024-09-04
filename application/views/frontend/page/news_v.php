@@ -10,7 +10,7 @@
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="<?= base_url() ?>public/global-images/news/<?= $news_item['image'] ?>" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="<?= base_url('news/category/'.$news_item['category_name']) ?>"><?= $news_item['category_description'] ?></a>
+                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="<?= base_url('news/category/'.$news_item['category_id']) ?>"><?= $news_item['category_description'] ?></a>
                         </div>
                         <div class="p-4">
                             <div class="d-flex mb-3">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="link-animated d-flex flex-column justify-content-start">
                     <?php foreach ($data['categories'] as $category): ?>
-                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="<?= base_url('news/category/'.$category['category_name']) ?>">
+                        <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="<?= base_url('news/category/'.$category['category_id']) ?>">
                             <i class="bi bi-arrow-right me-2"></i><?php echo htmlspecialchars($category['category_description']); ?>
                         </a>
                     <?php endforeach; ?>
