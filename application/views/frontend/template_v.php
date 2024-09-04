@@ -1,6 +1,7 @@
 <?php
 // echo json_encode($global_page_services);
 // exit;
+// echo json_encode($data);exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
