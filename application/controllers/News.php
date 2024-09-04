@@ -86,21 +86,26 @@ class News extends Main_controller
 
 	public function detail()
 	{
+        $latest_news = $this->m_news->get_news_limit(
+            1,
+            5
+        );
+        
         $slug = $this->uri->segment(3);
         $news_by_slug = $this->m_news->get_one_by_slug($slug);
 
 		$data = array(
-            'content'       => 'frontend/page/news_v',
+            'content'       => 'frontend/page/news_detail_v',
             'breadcrumb'    => '<a href="" class="h5 text-white">Home</a>
                                 <i class="far fa-circle text-white px-2"></i>
-                                <a href="" class="h5 text-white">News</a>',
+                                <a href="" class="h5 text-white">News Detail</a>',
             'active_menu'   => 'news',
             'data' => array(
                 'page_data' => $this->m_main->view_where('pages', array('page_code' => 'news'))->row(),
                 'my_company' => $this->m_main->view_where('my_company', array('company_id' => 1))->row(),
                 'categories' => $this->m_main->view_where('mst_category', array('status_id' => 2))->result_array(),
                 'news' => $news_by_slug,
-                'pagination' => $this->pagination->create_links(),
+                'latest_news' => $latest_news,
             )
         );
 

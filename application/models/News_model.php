@@ -32,7 +32,7 @@ class News_model extends CI_model
         $query = $this->db->get();
 
         // Return the result as an array of objects
-        return $query->result_array();
+        return $query->row();
 	}
 
 	public function all()
