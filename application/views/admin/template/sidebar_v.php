@@ -17,12 +17,12 @@
     <li class="nav-item"><a href="<?= base_url() ?>admin/mission" class="nav-link"><i class="icon-align-right icon"></i>Misi</a></li> 
     <li class="nav-item"><a href="<?= base_url() ?>admin/keyfactors" class="nav-link"><i class="icon-lock2 icon"></i>Key Factors</a></li> 
     <li class="nav-item"><a href="<?= base_url() ?>admin/problemsolution" class="nav-link"><i class="icon-file-check2 icon"></i>Problem & Solution</a></li> 
-    <li class="nav-item"><a href="<?= base_url() ?>admin/business_plan" class="nav-link"><i class="icon-stack3 icon"></i>Bisnis Plan</a></li> 
-    <li class="nav-item"><a href="<?= base_url() ?>admin/organization" class="nav-link"><i class="icon-users4 icon"></i>Struktur Organisasi</a></li> 
+    <!-- <li class="nav-item"><a href="<?= base_url() ?>admin/business_plan" class="nav-link"><i class="icon-stack3 icon"></i>Bisnis Plan</a></li>  -->
+    <!-- <li class="nav-item"><a href="<?= base_url() ?>admin/organization" class="nav-link"><i class="icon-users4 icon"></i>Struktur Organisasi</a></li>  -->
     <li class="nav-item"><a href="<?= base_url() ?>admin/history" class="nav-link"><i class="icon-atom2 icon"></i>Sejarah</a></li> 
     <li class="nav-item"><a href="<?= base_url() ?>admin/news" class="nav-link"><i class="icon-puzzle3 icon"></i>News</a></li> 
     <!-- <li class="nav-item"><a href="<?= base_url() ?>admin/event" class="nav-link"><i class="icon-puzzle3 icon"></i>Agenda</a></li>  -->
-    <li class="nav-item"><a href="<?= base_url() ?>admin/advertisement" class="nav-link"><i class="icon-ticket icon"></i>Iklan Perusahaan</a></li> 
+    <!-- <li class="nav-item"><a href="<?= base_url() ?>admin/advertisement" class="nav-link"><i class="icon-ticket icon"></i>Iklan Perusahaan</a></li>  -->
     <!-- <li class="nav-item"><a href="<?= base_url() ?>admin/service" class="nav-link"><i class="icon-wall icon"></i>Transaksi & Layanan</a></li> 
     <li class="nav-item"><a href="<?= base_url() ?>admin/property" class="nav-link"><i class="icon-office"></i>Manajemen Properti</a></li>  
     <li class="nav-item"><a href="<?= base_url() ?>admin/report" class="nav-link"><i class="icon-file-presentation2 icon"></i> Laporan </a></li>   -->
