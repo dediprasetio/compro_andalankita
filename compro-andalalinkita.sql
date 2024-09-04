@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2024 at 01:02 AM
+-- Generation Time: Sep 04, 2024 at 07:24 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.25
 
@@ -94,15 +94,18 @@ INSERT INTO `events` (`event_id`, `title`, `photo`, `url_youtube`, `short_descri
 CREATE TABLE `mst_category` (
   `category_id` int(11) NOT NULL,
   `category_name` varchar(50) NOT NULL,
-  `category_description` varchar(255) NOT NULL
+  `category_description` varchar(255) NOT NULL,
+  `status_id` int(11) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `mst_category`
 --
 
-INSERT INTO `mst_category` (`category_id`, `category_name`, `category_description`) VALUES
-(1, 'RAT', 'Rapat Tahunan');
+INSERT INTO `mst_category` (`category_id`, `category_name`, `category_description`, `status_id`) VALUES
+(1, 'informasi-perusahaan', 'Informasi Perusahaan', 2),
+(2, 'produk-kami', 'Produk Kami', 2),
+(3, 'komunitas', 'Komunitas', 2);
 
 -- --------------------------------------------------------
 
@@ -232,6 +235,7 @@ INSERT INTO `my_company` (`company_id`, `company_name`, `address`, `phone_number
 CREATE TABLE `news` (
   `news_id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `author` varchar(255) DEFAULT NULL,
   `short_description` varchar(255) NOT NULL,
@@ -250,13 +254,51 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`news_id`, `title`, `image`, `author`, `short_description`, `content`, `category_id`, `publish_start_date`, `status_id`, `tag_id`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-(5, 'fs', '367598fd9fb1067818f38532430096db.jpg', 'asd', 'sdf', '<p>asdsa</p>\r\n', 1, '2024-09-03', 2, 1, '2024-09-03 20:21:38', 2, NULL, 0),
-(18, 'News1', '3.jpeg', 'kakasi', 'iya ini desc', 'content', 1, '2023-03-26', 2, 1, '2024-09-02 23:06:27', 1, NULL, 1),
-(19, 'Test 2', 'f01077f3d9ffadf02e1bcda223898566.jpeg', 'Kakasi', 'desct test 2', '                            ', 1, '2024-09-02', 2, 1, '2024-09-02 23:21:44', 2, NULL, 0),
-(20, 'test3', '8f8e75447c4f06f3d2e1e424648e2fc4.jpg', 'Kakasi', 'asj', '                            ', 1, '2024-09-03', 2, 1, '2024-09-02 23:34:12', 2, NULL, 0),
-(21, 'dadsa', 'e328fac1d51511a1f5582d7d42989070.jpg', 'kas', 'adsad', '', 1, '2024-09-02', 2, 1, '2024-09-02 23:40:05', 2, NULL, 0),
-(22, 'Kakasi', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Kakasi', 'Dia dijuluki ninja peniru', '<p>Kakasi juga memili 3 murid hebat</p>\n', 1, '2024-09-03', 2, 1, '2024-09-02 23:45:54', 2, NULL, 0);
+INSERT INTO `news` (`news_id`, `title`, `slug`, `image`, `author`, `short_description`, `content`, `category_id`, `publish_start_date`, `status_id`, `tag_id`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
+(1, 'Breaking News: Tech Giant Unveils New AI Tool', 'breaking-news-tech-giant-unveils-new-ai-tool', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'John Doe', 'Tech Giant unveils a new AI tool.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(2, 'Market Update: Stocks Surge Amid Economic Optimism', 'market-update-stocks-surge-amid-economic-optimism', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Jane Smith', 'Stocks surge amid economic optimism.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(3, 'Health Experts Warn of New Flu Strain', 'health-experts-warn-of-new-flu-strain', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Alice Johnson', 'Health experts warn of a new flu strain.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(4, 'Sports: Local Team Wins Championship', 'sports-local-team-wins-championship', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Michael Brown', 'Local team wins the championship.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(5, 'Entertainment: Award-Winning Movie Hits Theaters', 'entertainment-award-winning-movie-hits-theaters', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Emily Davis', 'Award-winning movie hits theaters.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(6, 'Science: New Discovery in Space Exploration', 'science-new-discovery-in-space-exploration', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'David Wilson', 'New discovery in space exploration.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(7, 'Travel: Top Destinations for 2024 Revealed', 'travel-top-destinations-for-2024-revealed', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Sophia Martinez', 'Top destinations for 2024 revealed.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(8, 'Business: Major Merger Announced', 'business-major-merger-announced', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Chris Garcia', 'Major merger announced.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(9, 'Weather Alert: Severe Storms Expected', 'weather-alert-severe-storms-expected', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Olivia Rodriguez', 'Severe storms expected in the area.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(10, 'Education: Schools Adopting New Learning Methods', 'education-schools-adopting-new-learning-methods', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'James Hernandez', 'Schools adopting new learning methods.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(11, 'Technology: Breakthrough in Quantum Computing', 'technology-breakthrough-in-quantum-computing', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Elizabeth Lopez', 'Breakthrough in quantum computing.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(12, 'Politics: New Policy Changes Announced', 'politics-new-policy-changes-announced', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Daniel Gonzalez', 'New policy changes announced by the government.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(13, 'Finance: Tips for Smart Investing', 'finance-tips-for-smart-investing', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Matthew Clark', 'Tips for smart investing.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(14, 'Fashion: Latest Trends for Fall', 'fashion-latest-trends-for-fall', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Ava Lewis', 'Latest trends for fall fashion.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(15, 'Environment: Conservation Efforts Increase', 'environment-conservation-efforts-increase', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'William Young', 'Conservation efforts increase globally.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(16, 'Real Estate: Housing Market Trends', 'real-estate-housing-market-trends', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Mia King', 'Current trends in the housing market.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(17, 'Food: New Restaurant Openings in the City', 'food-new-restaurant-openings-in-the-city', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Ethan Wright', 'New restaurant openings in the city.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(18, 'Automotive: Electric Cars Gain Popularity', 'automotive-electric-cars-gain-popularity', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Isabella Scott', 'Electric cars are gaining popularity.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(19, 'Health: Benefits of a Balanced Diet', 'health-benefits-of-a-balanced-diet', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Alexander Hill', 'The benefits of a balanced diet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(20, 'Education: Importance of Early Childhood Education', 'education-importance-of-early-childhood-education', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Sophia Green', 'The importance of early childhood education.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(21, 'Lifestyle: Tips for a Healthier Lifestyle', 'lifestyle-tips-for-a-healthier-lifestyle', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Liam Adams', 'Tips for leading a healthier lifestyle.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(22, 'Entertainment: Best Movies to Watch This Month', 'entertainment-best-movies-to-watch-this-month', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Charlotte Baker', 'Best movies to watch this month.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:16', 1, '2024-09-04 20:13:16', 1),
+(23, 'Breaking News: Tech Giant Unveils New AI Tool', 'breaking-news-tech-giant-unveils-new-ai-tool', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'John Doe', 'Tech Giant unveils a new AI tool.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(24, 'Market Update: Stocks Surge Amid Economic Optimism', 'market-update-stocks-surge-amid-economic-optimism', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Jane Smith', 'Stocks surge amid economic optimism.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(25, 'Health Experts Warn of New Flu Strain', 'health-experts-warn-of-new-flu-strain', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Alice Johnson', 'Health experts warn of a new flu strain.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(26, 'Sports: Local Team Wins Championship', 'sports-local-team-wins-championship', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Michael Brown', 'Local team wins the championship.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(27, 'Entertainment: Award-Winning Movie Hits Theaters', 'entertainment-award-winning-movie-hits-theaters', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Emily Davis', 'Award-winning movie hits theaters.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(28, 'Science: New Discovery in Space Exploration', 'science-new-discovery-in-space-exploration', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'David Wilson', 'New discovery in space exploration.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(29, 'Travel: Top Destinations for 2024 Revealed', 'travel-top-destinations-for-2024-revealed', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Sophia Martinez', 'Top destinations for 2024 revealed.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(30, 'Business: Major Merger Announced', 'business-major-merger-announced', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Chris Garcia', 'Major merger announced.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(31, 'Weather Alert: Severe Storms Expected', 'weather-alert-severe-storms-expected', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Olivia Rodriguez', 'Severe storms expected in the area.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(32, 'Education: Schools Adopting New Learning Methods', 'education-schools-adopting-new-learning-methods', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'James Hernandez', 'Schools adopting new learning methods.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(33, 'Technology: Breakthrough in Quantum Computing', 'technology-breakthrough-in-quantum-computing', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Elizabeth Lopez', 'Breakthrough in quantum computing.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(34, 'Politics: New Policy Changes Announced', 'politics-new-policy-changes-announced', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Daniel Gonzalez', 'New policy changes announced by the government.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(35, 'Finance: Tips for Smart Investing', 'finance-tips-for-smart-investing', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Matthew Clark', 'Tips for smart investing.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(36, 'Fashion: Latest Trends for Fall', 'fashion-latest-trends-for-fall', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Ava Lewis', 'Latest trends for fall fashion.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(37, 'Environment: Conservation Efforts Increase', 'environment-conservation-efforts-increase', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'William Young', 'Conservation efforts increase globally.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(38, 'Real Estate: Housing Market Trends', 'real-estate-housing-market-trends', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Mia King', 'Current trends in the housing market.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(39, 'Food: New Restaurant Openings in the City', 'food-new-restaurant-openings-in-the-city', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Ethan Wright', 'New restaurant openings in the city.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(40, 'Automotive: Electric Cars Gain Popularity', 'automotive-electric-cars-gain-popularity', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Isabella Scott', 'Electric cars are gaining popularity.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(41, 'Health: Benefits of a Balanced Diet', 'health-benefits-of-a-balanced-diet', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Alexander Hill', 'The benefits of a balanced diet.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(42, 'Education: Importance of Early Childhood Education', 'education-importance-of-early-childhood-education', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Sophia Green', 'The importance of early childhood education.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(43, 'Lifestyle: Tips for a Healthier Lifestyle', 'lifestyle-tips-for-a-healthier-lifestyle', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Liam Adams', 'Tips for leading a healthier lifestyle.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1),
+(44, 'Entertainment: Best Movies to Watch This Month', 'entertainment-best-movies-to-watch-this-month', '44ea0d1984ed4eab8efd4d6a04262d43.jpg', 'Charlotte Baker', 'Best movies to watch this month.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.', 1, '2024-09-03', 2, 1, '2024-09-04 20:13:49', 1, '2024-09-04 20:13:49', 1);
 
 -- --------------------------------------------------------
 
@@ -413,7 +455,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `mst_category`
 --
 ALTER TABLE `mst_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `mst_status`
@@ -443,7 +485,7 @@ ALTER TABLE `my_company`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `pages`
