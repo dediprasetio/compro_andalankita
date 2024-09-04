@@ -53,6 +53,7 @@ class News extends Api_main_controller
 
                 $inputData = array(
                     'title'   => $this->input->post('title'),
+                    'slug'  => $this->convertToSlug($this->input->post('title')),
                     'image'   => $image_name,
                     'author'   => $this->input->post('author'),
                     'short_description'   => $this->input->post('short_description'),
@@ -99,6 +100,7 @@ class News extends Api_main_controller
         try {
             $updateData = array(
                 'title'   => $this->input->post('title'),
+                'slug'  => $this->convertToSlug($this->input->post('title')),
                 'author'   => $this->input->post('author'),
                 'short_description'   => $this->input->post('short_description'),
                 'content'   => $this->input->post('content'),
@@ -175,6 +177,19 @@ class News extends Api_main_controller
                 ->set_content_type('application/json')
                 ->set_output(json_encode($responseArray));
         }
+    }
+
+    function convertToSlug($title) {
+        // Convert the title to lowercase
+        $slug = strtolower($title);
+        
+        // Replace any non-alphanumeric characters with a hyphen
+        $slug = preg_replace('/[^a-z0-9]+/i', '-', $slug);
+        
+        // Remove any trailing hyphens
+        $slug = trim($slug, '-');
+        
+        return $slug;
     }
 }
 ?>
