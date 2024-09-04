@@ -181,7 +181,7 @@
                     </div>
                     <h4 class="mb-3">Andalalin Analisis Dampak Lalu Lintas</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/andalalin') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -194,7 +194,7 @@
                     </div>
                     <h4 class="mb-3">Izin Prinsip Angkutan Peristiwa</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/izinprinsipangkutan') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -207,7 +207,7 @@
                     </div>
                     <h4 class="mb-3">Konsultasi Lelang/Tender Pemerintah</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/kartupengawasankp') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -220,7 +220,7 @@
                     </div>
                     <h4 class="mb-3">Kartu Pengawasan/KP Angkutan Pariwisata</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/smk') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -233,7 +233,7 @@
                     </div>
                     <h4 class="mb-3">Sistem Manajemen Keselamatan (SMK)</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/mrll') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -246,7 +246,7 @@
                     </div>
                     <h4 class="mb-3">Manajemen Rekayasa Lalulintas (MRLL)</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/andalalin') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -259,7 +259,7 @@
                     </div>
                     <h4 class="mb-3">Pembuatan Aplikasi Perizinan Online Berbasis Web Interaktif</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/lelangtenderpemerint') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -272,7 +272,7 @@
                     </div>
                     <h4 class="mb-3">Pembuatan Aplikasi Lainnya</h4>
                     <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    <a class="btn btn-lg btn-primary rounded" href="">
+                    <a class="btn btn-lg btn-primary rounded" href="<?= base_url('pages/index/lainnya') ?>">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -307,10 +307,17 @@
                         <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 jam telephone support</h5>
                     </div>
                 </div>
-                <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et
-                    dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et
-                    dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus
-                    sed et. Takimata takimata sanctus sed.</p>
+                <p class="mb-4">Andalalinkita.com dibentuk dari kebutuhan para pelaku bisnis
+                yang pembangunan dan operasional usahanya bersinggungan
+                langsung dan berdampak pada sistem transportasi. Analisis
+                Dampak Lalu Lintas yang sering kita kenal dengan istilah
+                ANDALALIN dengan dasar hukum Peraturan Menteri Perhubungan
+                Republik Indonesia Nomor PM. 17 Tahun 2021 tentang
+                Penyelenggaraan Analisis Dampak Lalu Lintas yang menggerakkan
+                founder kami untuk menyediakan platform digital berbasis website
+                interaktif dalam membantu pelaku bisnis dalam memperoleh
+                perizinan dalam bidang transportasi.
+</p>
                 <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded"
                         style="width: 60px; height: 60px;">
@@ -318,7 +325,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-2">Hubungi Kami Untuk Konsultasi</h5>
-                        <h4 class="text-primary mb-0">+012 345 6789</h4>
+                        <h4 class="text-primary mb-0">021-75686137 / 082110757770</h4>
                     </div>
                 </div>
             </div>
@@ -468,7 +475,40 @@
             <h1 class="mb-0">Baca Berita Terbaru Kami</h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+            <?php foreach ($data['latest_news'] as $latest_news): ?>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="<?= base_url() ?>public/front-end-andalalinkita/img/blog-1.jpg"
+                            alt="">
+                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
+                            href="<?= base_url('news/category/'.$latest_news['category_id']) ?>"><?= $latest_news['category_description'] ?></a>
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i><?= $latest_news['author'] ?></small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i><?= $latest_news['publish_start_date'] ?></small>
+                        </div>
+                        <h4 class="mb-3"><?= $latest_news['title'] ?></h4>
+                        <p>
+                            <?php
+                                $short_description = $latest_news['short_description'];
+                                $short_description = (strlen($short_description) > 60) ? substr($short_description, 0, 60) . '...' : $short_description;
+                                echo  '<p>'.$short_description.'</p>';
+                            ?>
+                        </p>
+                        <a class="text-uppercase" href="<?= base_url('/news/detail/'.$latest_news['slug']) ?>">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+                <!-- <div class="d-flex rounded overflow-hidden mb-3">
+                    <img class="img-fluid" src="<?= base_url() ?>public/global-images/news/<?= $latest_news['image'] ?>" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                    <a href="<?= base_url('/news/detail/'.$latest_news['slug']) ?>" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0"><?= $latest_news['title'] ?>
+                    </a>
+                </div> -->
+            <?php endforeach; ?>
+            <!-- <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                 <div class="blog-item bg-light rounded overflow-hidden">
                     <div class="blog-img position-relative overflow-hidden">
                         <img class="img-fluid" src="<?= base_url() ?>public/front-end-andalalinkita/img/blog-1.jpg"
@@ -524,7 +564,7 @@
                         <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
