@@ -98,13 +98,15 @@
 
     <!-- Template Javascript -->
     <script src="<?= base_url() ?>public/front-end-andalalinkita/js/main.js"></script>
+	<script src="<?= base_url() ?>public/cms/build/js/global/variable.js"></script>
+	<script src="<?= base_url() ?>public/cms/build/js/global/function.js"></script>
     
 	<?php
 	if (!empty($js_file)) {
-		echo '<script type="module" src="' . base_url() . 'public/cms/build/js/pages/' . $js_file . '.js"></script>';
+		echo '<script type="module" src="' . base_url() . 'public/front-end-andalalinkita/js/pages/' . $js_file . '.js"></script>';
 	}
 	if (!empty($javascript)) {
-		echo '<script type="module" src="' . base_url() . 'public/cms/build/js/pages/' . $javascript . '.js"></script>';
+		echo '<script type="module" src="' . base_url() . 'public/front-end-andalalinkita/js/pages/' . $javascript . '.js"></script>';
 	}
 	?>
 </body>
