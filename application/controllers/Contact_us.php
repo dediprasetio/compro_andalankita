@@ -8,22 +8,25 @@ class Contact_us extends Main_controller
 	function __construct()
 	{
 		parent::__construct();
-        $this->load->model('main_model', 'mainmodel');
+        $this->load->model('main_model', 'm_main');
 		$this->initialize_cookie();
+		$this->load_global_data();
 	}
 
 	public function index()
 	{
 		$data = array(
-			'content' 		=> 'page/contact_us_v',
-			'breadcrumb' 	=> '<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-									<span class="breadcrumb-item active">Hubungi Kami</span>',
+			'content' 		=> 'frontend/page/contact_us_v',
+			'breadcrumb' 	=> '<a href="" class="h5 text-white">Home</a>
+								<i class="far fa-circle text-white px-2"></i>
+								<a href="" class="h5 text-white">Contact Us</a>',
 			'active_menu'	=> 'contact_us',
-			'page'    		=> $this->mainmodel->view('my_company')->row(),
-			'data'			=> array(
-				'my_company'	=> $this->mainmodel->view_where('my_company', array('company_id' => 1))->row(),
-				)
+            'js_file'              => 'contact-us',
+			'data' => array(
+				'page_data' => $this->m_main->view_where('pages', array('page_code' => 'contactus'))->row(),
+				'my_company'	=> $this->m_main->view_where('my_company', array('company_id' => 1))->row(),
+			)
 		);
-		$this->template->render_view('template_v', $data);
+		$this->template->render_view('frontend/template_v', $data);
 	}
 }
