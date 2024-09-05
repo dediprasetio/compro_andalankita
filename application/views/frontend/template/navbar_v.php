@@ -48,7 +48,7 @@
                     <a href="https://docs.google.com/spreadsheets/d/1hsBos8u8Qg33RJ4bqv3_miVO60KAHEk9P6PoQV1wZus/edit?usp=sharing" target="_blank" class="nav-item nav-link">Project Status</a>
                     <a href="<?= base_url() ?>pages/index/ourteam" class="nav-item nav-link">Be Our Team</a>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="javascript:void(0)"><i class="fa fa-users"></i></butaton>
                 <a href="" class="btn-orange py-2 px-4 ms-3">Register or Login</a>
             </div>
         </nav>
