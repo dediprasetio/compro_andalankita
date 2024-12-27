@@ -63,8 +63,8 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-warning text-uppercase mb-3 animated slideInDown">Pusing Urus Andalalin ?</h5>
                         <h1 class="display-2 text-white mb-md-4 animated zoomIn">Kami hadir <br> siap membantu Anda !!!</h1>
-                        <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Proses Sekarang</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Konsultasi</a>
+                        <a href="https://wa.me/6281234567890?text=Hello%20I%20am%20interested" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Proses Sekarang</a>
+                        <a href="<?= base_url("pages/index/andalalin") ?>" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Layanan Kami</a>
                     </div>
                 </div>
             </div>
@@ -74,8 +74,8 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-warning text-uppercase mb-3 animated slideInDown">Konsultasi Lainnya</h5>
                         <h1 class="display-1 text-white mb-md-4 animated zoomIn">Bebas Menghubungi Kami Kapan Saja.</h1>
-                        <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Layanan Kami</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                        <a href="https://wa.me/6281234567890?text=Hello%20I%20am%20interested" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Konsultasi</a>
+                        <a href="<?= base_url("contact-us") ?>" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                     </div>
                 </div>
             </div>

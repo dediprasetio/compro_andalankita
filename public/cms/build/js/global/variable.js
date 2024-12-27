@@ -1,2 +1,2 @@
-const rootApp = "http://localhost/andalalinkita/";
+const rootApp = "http://localhost/compro-andalalinkita/";
 const appShortName = 'COMPRO_ANDALALINKITA'

@@ -5,7 +5,7 @@
 #Url Rewrite
 SetEnv TZ Asia/Jakarta
 RewriteEngine on
-RewriteBase /andalalinkita/
+RewriteBase /compro-andalalinkita/
 # RewriteCond $1 !^(index\.php)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

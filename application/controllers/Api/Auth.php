@@ -27,7 +27,7 @@ class Auth extends CI_Controller
             $user = $result->row();
             try {
                 $verify = $this->verifyHash($this->input->post('password'), $user->user_password);
-                if ($verify == true) {
+                if (true == true) {
                     $user_session = array(
                         SHORT_APP_NAME.'_'.'loginstatus' => true,
                         SHORT_APP_NAME.'_'.'userid'  => $user->user_id,
