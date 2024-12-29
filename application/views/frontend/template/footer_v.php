@@ -4,14 +4,13 @@
             <div class="col-lg-4 col-md-6 footer-about">
                 <div
                     class="d-flex flex-column align-items-center justify-content-center text-left h-100 bg-primary p-4">
-                    <a href="index.html" class="navbar-brand">
-                        <img src="<?= base_url() ?>public/front-end-andalalinkita/img/logo1.png" alt="" class="mb-2">
-                        <h3 class="m-0 text-white text-left mt-2">PT. Prima <span class="color-orange">Senja</span> Perkasa</h3>
+                    <p>andalalinkita.com</p>
+                    <p>BY</p>
+                    <a href="javascript:void(0)" class="navbar-brand">
+                        <!-- <img src="<?= base_url() ?>public/front-end-andalalinkita/img/logo1.png" alt="" class="mb-2"> -->
+                        <h3 class="m-0 text-left mt-2 footer-logo-text">PT. Prima Senja Perkasa</h3>
                     </a>
 
-                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                        <h3 class="text-light mb-0">Get In Touch</h3>
-                    </div>
                     <p class="mt-3 mb-4 text-left">Andalalinkita.com dibentuk dari kebutuhan para pelaku bisnis yang pembangunan dan operasional usahanya bersinggungan langsung dan berdampak pada sistem transportasi.</p>
                 </div>
 

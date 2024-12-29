@@ -243,6 +243,17 @@ h6,
     }
 }
 
+/** Navbar Custom **/
+/* .navbar .navbar-collapse:after{
+    background-color: #34AD54;
+    content: "";
+    position: absolute;
+    left: calc(100% - 20px);
+    top: 0;
+    height: 70px;
+    width: 4000px;
+} */
+
 
 /*** Carousel ***/
 .carousel-caption {
@@ -512,6 +523,17 @@ h6,
 
 .link-animated a:hover {
     padding-left: 10px;
+}
+
+.footer-logo-image{
+    height: 45px;
+}
+
+.footer-logo-text{
+    /* font-size: 26px; */
+    font-weight: bold;
+    color: var(--dark);
+    /* margin-left: 7px; */
 }
 
 @media (min-width: 767.98px) {

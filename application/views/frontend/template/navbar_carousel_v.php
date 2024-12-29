@@ -1,13 +1,13 @@
 <div class="container-fluid position-relative p-0">
     <div class="container-fluid position-relative">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <a href="javascript:void(0)" class="navbar-brand p-0">
                 <!-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
                 <div class="d-flex justify-content-center">
                     <div class="logo me-5 pt-2">
                         <img src="<?= base_url() ?>public/front-end-andalalinkita/img/logo1.png" alt="">
                     </div>
-                    <div class="powered ms-3 pt-3">
+                    <div class="powered ms-3 pt-3 d-none d-md-block">
                         Powered By
                         <p class="text-capitalize">PT. Prima <span class="color-orange">Senja</span> Perkasa</p>
                     </div>

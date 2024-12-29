@@ -7,7 +7,7 @@
                     <div class="logo me-5 pt-2">
                         <img src="<?= base_url() ?>public/front-end-andalalinkita/img/logo1.png" alt="">
                     </div>
-                    <div class="powered ms-3 pt-3">
+                    <div class="powered ms-3 pt-3 d-none d-md-block">
                         Powered By
                         <p class="text-capitalize">PT. Prima <span class="color-orange">Senja</span> Perkasa</p>
                     </div>
